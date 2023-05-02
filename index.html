@@ -45,6 +45,7 @@
   <script src="static/js/index.js"></script>
 </head>
 <body>
+<data-server-no-reload>
 
 
   <section class="hero">
@@ -52,20 +53,20 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">PREFIX TUNING FOR AUTOMATED AUDIO CAPTIONING</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Minkyu Kim</a><sup>1*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Kim Sung-Bin</a><sup>2*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Tae-Hyun Oh</a><sup>1,2,3</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block"><sup>1</sup>Grad. School of Artificial Intelligence and<sup>2</sup>Dept. of Electrical Engineering, POSTECH, Korea.<br><sup>3</sup>Institute for Convergence Research and Education in Advanced Technology, Yonsei University, Korea.<br>ICASSP 2023</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -73,7 +74,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2303.17489.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,7 +83,7 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Supplementary PDF link 
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -91,7 +92,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span>-->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -106,7 +107,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2303.17489" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -127,13 +128,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <image poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+        <img src="static/images/pipeline.jpg" alt="MY ALT TEXT"/>
+      </image>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Overall architecture
       </h2>
     </div>
   </div>
@@ -148,7 +148,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Audio captioning aims to generate text descriptions from environmental sounds. One challenge of audio captioning is the difficulty of the generalization due to the lack of audio-text paired training data. In this work, we propose a simple yet effective method of dealing with small-scaled datasets by leveraging a pre-trained language model. We keep the language model frozen to maintain the expressivity for text generation, and we only learn to extract global and temporal features from the input audio. To bridge a modality gap between the audio features and the language model, we employ mapping networks that translate audio features to the continuous vectors the language model can understand, called prefixes. We evaluate our proposed method on the Clotho and AudioCaps dataset and show our method outperforms prior arts in diverse experimental settings.
           </p>
         </div>
       </div>
@@ -157,47 +157,12 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
+<table>
+  <tr>
+    
+    <td><img alt="" src="/static/images/l5KdHAWwJCw_image.png" /></td><td><img alt="" src="/static/images/Lluvia_1_image.png" /></td>
+  <tr>
+</table>
 
 
 <!-- Youtube video -->
@@ -221,43 +186,6 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
@@ -278,7 +206,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{kim2023prefix,
+        title={Prefix tuning for automated audio captioning},
+        author={Kim, Minkyu and Sung-Bin, Kim and Oh, Tae-Hyun},
+        journal={arXiv preprint arXiv:2303.17489},
+        year={2023}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
