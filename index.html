@@ -158,12 +158,33 @@
 <!-- End paper abstract -->
 
 <!-- Image carousel -->
+<style>
+  .flex-container{ 
+      width: 100%; 
+      height: 100vh; 
+      display: -webkit-box; 
+      display: -moz-box;
+      display: -ms-flexbox; 
+      display: flex; 
+
+      -webkit-box-align: center; 
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; /* 수직 정렬 */
+
+      -webkit-box-pack: center;
+      -moz-box-pack: center; 
+      -ms-flex-pack: center; 
+      justify-content: center; /* 수평 정렬 */
+  } 
+</style>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-        <center><h2 class="title is-3">Results</h2></center>
+        <div class="item;flex-container">
+        <h2 class="title is-3" style="text-align: center;">Qualitative results</h2>
         <style>
           .left-box {
             float: left;
@@ -195,19 +216,29 @@
             </h2>
           </div>
         </div>
-      <div class="item">
+      <div class="item;flex-container">
         <!-- Your image here -->
+        <h2 class="title is-3" style="text-align: center;">Evaluation on Clotho</h2>
         <img src="static/images/table1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           <!-- Fourth image description. -->
         </h2>
       </div>
-      <div class="item">
+      <div class="item;flex-container">
         <!-- Your image here -->
+        <h2 class="title is-3" style="text-align: center;">Evaluation on AudioCaps</h2>
         <img src="static/images/table2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           <!-- Fourth image description. -->
         </h2>
+      </div>
+      <div class="item;flex-container">
+      <h3 class="title is-3" style="text-align: center;">Text to audio retrieval</h3>
+      <img src="static/images/text_to_audio_retrieval.png"  style="margin-left: auto; margin-right: auto; display: block;" alt="MY ALT TEXT"/> <br>
+      
+      <h3 class="title is-3" style="text-align: center;"><br>Ablation study</h3>
+      <img src="static/images/ablation_study.png"  style="margin-left: auto; margin-right: auto; display: block;" alt="MY ALT TEXT"/> <br>
+          
       </div>
   </div>
 </div>
